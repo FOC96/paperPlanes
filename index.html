@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>LOG IN</title>   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="funciones.js"></script>
+    <link rel="stylesheet" href="animate.css-master/animate.min.css">
+</head>
+
+<body class="fondo1">
+    
+    <div class="medio" id="inicio">
+        
+        <div class="login">
+            <img src="l1.svg" class="logo">
+            <input type="email" class="correo" id="email" placeholder="Correo">
+            <input type="password" class="contrasena" id="password" placeholder="Contraseña">
+        
+            <button class="btn" id="btnEntrar" onclick="verificarCredenciales()">Entrar</button><br>
+            <button id="btnRegistrar" onclick="irARegistro()">Registrar</button>
+        </div>
+        
+    </div>
+    
+    <div class="abajo" id="registro">
+        
+        <div class="login">
+            <h1>Registro</h1>
+            <input type="text" class="usuario" id="nombreReg" placeholder="Nombre">
+            <input type="email" class="correo" id="correoReg" placeholder="Correo">
+            <input type="password" class="contrasena" id="contraReg" placeholder="Contraseña">
+        
+            <button class="btn" id="btnEntrar" onclick="registrarUsuario()">Registrarme</button><br>
+            <button id="btnRegistrar" onclick="volverIniciarSesion()">Iniciar Sesión</button>
+        </div>
+        
+    </div>
+   
+    
+    
+    
+    <div class="backIMG">
+        
+    </div>
+    
+    
+</body>
+
+
+</html>

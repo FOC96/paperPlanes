@@ -1,0 +1,57 @@
+<html>
+<head>
+    <title>Inicio</title>   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="funciones.js"></script>
+    <link rel="stylesheet" href="animate.css-master/animate.min.css">
+</head>
+
+<body class="fondo1">
+   
+       
+    
+        <div id="map"></div>
+    
+        <div id="botonera">
+            <button id="boton-menu" onclick="exit()"><img src="exit.svg" alt=""></button>
+            <button id="boton-guardar" onclick="saveMarker()">Guardar</button>
+        </div>
+        
+        <div class="statusBar">
+            
+        </div>
+    
+        <div class="blockBack" id="fondoBloqueo">
+    </div>
+    
+            <div class="ficha" id="divMarcador">
+            <h1>Marcador</h1>
+
+            <h3>Ubicación del marcador</h3>
+            <div id="geoPinDiv"></div>
+
+            <h3>Información General</h3>
+            <div class="grayArea">
+                <input type="text" placeholder="Título" id="tituloMarcador">
+                <textarea placeholder="Descripción"></textarea>
+                <select>
+                    <option>Comida</option>
+                    <option>Entretenimiento</option>
+                    <option>Ocio</option>
+                </select>
+                <input type="range" min="1" max="4">
+                <input type="time" class="inTime" placeholder="Abre">
+                <input type="time" class="inTime" placeholder="Cierra">
+            </div>
+            <button class="btnVentana">Guardar</button>
+            <button class="btnVentana" onclick="hidePopUp()">Cancelar</button>
+        </div>
+    
+</body>
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDUWNfJjDYGJk6_GAqfGa62N6cY8ASDMNA">
+    </script>
+
+</html>

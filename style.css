@@ -1,0 +1,409 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: -apple-system, 'Roboto', sans-serif;
+    /* COLORES */
+    --botonesFace: white;
+    --specialColor: #FF0045;
+    outline: none;
+}
+
+body{
+    overflow: hidden;
+}
+
+.fondo1{
+/*    background: linear-gradient(#252238, #736f84);*/
+    background: black;
+}
+
+
+.backIMG{
+    background: url(cityBack.jpeg);
+/*    background: url(cityBack.jpeg);*/
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: fixed;
+    width: 110%;
+    height: 110%;
+    left: -5%;
+    top: -5%;
+    -webkit-filter:blur(2px);
+    -webkit-filter:contrast(1.2);
+    -webkit-filter:saturate(1.3);
+    opacity: .25;
+    z-index: -1;
+}
+
+
+input[type="email"], input[type="text"], input[type="password"]{
+    border-bottom: 1px solid rgba(255,255,255,.7);
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    margin-bottom: 40px;
+    width: 100%;
+    height: 35px;
+    outline: none;
+    /* TEXTO */
+    color: white;
+    font-size: 1.4em;
+    font-weight: 200;
+    padding-left: 35px;
+    line-height: 35px;
+}
+
+::-webkit-input-placeholder{
+    color: rgba(255,255,255,.7);
+}
+
+button:active{
+    opacity: .3;
+    transition: .4s;
+}
+
+.usuario{
+    background: url(user.svg);
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+
+.contrasena{
+    background: url(key.svg);
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+
+.correo{
+    background: url(mail.svg);
+    background-size: 25px;
+    background-repeat: no-repeat;
+}
+
+.btn{
+    border-radius: 20px;
+    background: none;
+    border: 1px solid var(--botonesFace);
+    width: 250px;
+    height: 35px;
+    outline: none;
+    /* TEXTO */
+    font-size: 1.2em;
+    color: var(--botonesFace);
+    font-weight: 300;
+    margin-left: calc(50% - 125px);
+    position: relative;
+}
+
+
+.login{
+    height: 450px;
+    position: relative;
+    top: calc(50% - 225px);
+    width: 80%;
+    left: 10%;
+    z-index: 2;
+}
+
+
+.login>h1{
+    font-weight:800;
+    font-size: 2.8em;
+    text-align: center;
+    color: white;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+#btnEntrar{
+    margin-top: 40px;
+}
+
+.logo{
+    width: 150px;
+    margin-left: calc(50% - 75px);
+    margin-bottom: 30px;
+}
+
+#btnRegistrar{
+    background: none;
+    width: 200px;
+    height: 30px;
+    outline: none;
+    border: none;
+    /* TEXTO */
+    font-size: 1em;
+    color: rgba(255,255,255,.7);
+    font-weight: 300;
+    margin-left: calc(50% - 100px);
+    margin-top: 15px;
+}
+
+.medio{
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    position: fixed;
+}
+
+.abajo{
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    position: fixed;
+}
+
+
+.arriba{
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    position: fixed;
+}
+
+
+#map{
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    float: left;
+    background: red;
+    width: 100%;
+    height: 100%;
+}
+
+#botonera{
+    float: left;
+    position: fixed;
+    height: 65px;
+    width: 100%;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    border: none;
+}
+
+/*
+#boton-menu{
+    position: fixed;
+    float: left;
+    width: 60px;
+    height: 60px;
+    background: yellow;
+    left: 10px;
+    top: 10px;
+    border-radius: 50%;
+    z-index: 2;
+}
+*/
+
+/*
+#botonera>button{
+    width: 80%;
+    height: 60%;
+    border-radius: 25px;
+    position: relative;
+    outline: none;
+    -webkit-backdrop-filter: (10px);
+    background: rgba(28, 114, 179, .9);
+    color: white;
+    font-size: 1.3em;
+    margin-left: 10%;
+    border: none;
+}
+*/
+
+#boton-menu{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background: white;
+    border: none;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    margin-right: 10px;
+    float: left;
+    margin-left:  calc(15% - 30px);
+    outline: none;
+    font-size: 1.5em;
+    font-weight: 500;
+    line-height: 45px;
+    color: var(--specialColor);
+}
+
+#boton-menu>img{
+    height: 24px;
+}
+
+
+#boton-guardar{
+    height: 45px;
+    width: 70%;
+    border-radius: 30px;
+    background: var(--specialColor);
+    color: white;
+    font-size: 1.5em;
+    font-weight: 500;
+    float: left;
+    border: none;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+    outline: none;
+}
+
+
+.blockBack{
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,.85);
+    position: fixed;
+    z-index: -2;
+    
+}
+
+.ficha{
+    width: 230pt;
+    height: 400pt;
+    background: #F9F9F9;
+    border-radius: 7px;
+    padding-top: 10px;
+    margin-top: calc(50vh - 200pt);
+    margin-left: calc(50vw - 115pt);
+    box-sizing: border-box;
+    overflow-x: hidden;
+    overflow-y: auto;
+    box-shadow: 0px 0px 8px 2px rgba(0,0,0,0.7);
+    z-index: -2;
+    position: absolute;
+}
+
+.ficha>h1{
+    font-weight:800;
+    font-size: 2em;
+    text-align: center;
+    color: black;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.ficha>h3{
+    font-size: 12px;
+    color: #000000;
+    letter-spacing: 0.34px;
+    font-weight: 500;
+    padding-left: 10px;
+}
+
+#geoPinDiv{
+    width: 100%;
+    height: 80px;
+    margin-bottom: 10px;
+    background: red;
+}
+
+.grayArea>input,textarea{
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    font-size: 1.25em;
+    margin-bottom: 0px;
+    color: black;
+}
+
+::-webkit-input-placeholder{
+    color: #6D6D6D;
+}
+
+.btnVentana{
+    font-size: 1em;
+    font-weight: 500;
+    color: var(--specialColor);
+    background: none;
+    outline: none;
+    width: 50%;
+    float: left;
+    height: 45px;
+    bottom: 0px;
+    border: none;
+    margin-top: 20px;
+}
+
+#tituloMarcador{
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 300;
+    margin-top: 5px;
+}
+
+.grayArea>textarea{
+    resize: none;
+    border: none;
+    height: 120px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    box-sizing: border-box;
+    font-weight: 300;
+    margin-bottom: 10px;
+    outline: none;
+    font-size: 15px;
+}
+
+.grayArea>select{
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    outline: none;
+    -webkit-appearance: menulist;
+}
+
+.grayArea>input[type="range"]{
+    -webkit-appearance: none;
+    background: none;
+    height: 50px;
+    outline: none;
+    width: 70%;
+}
+
+.grayArea>label{
+    line-height: 50px;
+}
+
+.grayArea>input[type="range"]::-webkit-slider-thumb{
+    background: #FFFFFF;
+    border: 0px solid rgba(0,0,0,0.15);
+    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.30);
+    height: 25px;
+    width: 25px;
+    -webkit-appearance:none;
+    border-radius: 50%;
+    margin-top: -10px;
+}
+
+.grayArea>input[type="range"]::-webkit-slider-runnable-track{
+    background: #909090;
+    border-radius: 2px;
+    height: 4px;
+}
+
+.inTime{
+    width: 43% !important;
+    float: left;
+}
+
+
+.grayArea{
+    background: #D8D8D8;
+}
+
+
+.statusBar{
+    background: white;
+/*    background: var(--specialColor);*/
+    opacity: 1;
+    height: 15pt;
+    position: fixed;
+    width: 100%;
+    -webkit-backdrop-filter: blur(10px);
+}
