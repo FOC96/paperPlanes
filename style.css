@@ -1,10 +1,12 @@
 *{
     margin: 0px;
     padding: 0px;
-    font-family: -apple-system, 'Roboto', sans-serif;
+    font-family:  -apple-system, 'Roboto', sans-serif;
     /* COLORES */
     --botonesFace: white;
     --specialColor: #FF0045;
+    --lightGray: #D8D8D8;
+    --darkGray: #666666;
     outline: none;
 }
 
@@ -52,6 +54,7 @@ input[type="email"], input[type="text"], input[type="password"]{
     font-weight: 200;
     padding-left: 35px;
     line-height: 35px;
+    border-radius: 0px;
 }
 
 ::-webkit-input-placeholder{
@@ -170,7 +173,7 @@ button:active{
     left: 0px;
     bottom: 0px;
     float: left;
-    background: red;
+    background: white;
     width: 100%;
     height: 100%;
 }
@@ -185,36 +188,6 @@ button:active{
     right: 0px;
     border: none;
 }
-
-/*
-#boton-menu{
-    position: fixed;
-    float: left;
-    width: 60px;
-    height: 60px;
-    background: yellow;
-    left: 10px;
-    top: 10px;
-    border-radius: 50%;
-    z-index: 2;
-}
-*/
-
-/*
-#botonera>button{
-    width: 80%;
-    height: 60%;
-    border-radius: 25px;
-    position: relative;
-    outline: none;
-    -webkit-backdrop-filter: (10px);
-    background: rgba(28, 114, 179, .9);
-    color: white;
-    font-size: 1.3em;
-    margin-left: 10%;
-    border: none;
-}
-*/
 
 #boton-menu{
     height: 45px;
@@ -284,7 +257,7 @@ button:active{
     text-align: center;
     color: black;
     position: relative;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .ficha>h3{
@@ -302,11 +275,9 @@ button:active{
     background: red;
 }
 
-.grayArea>input,textarea{
+.grayArea>input[type="text"],textarea{
     width: calc(100% - 20px);
     margin-left: 10px;
-    font-size: 1.25em;
-    margin-bottom: 0px;
     color: black;
 }
 
@@ -323,39 +294,50 @@ button:active{
     width: 50%;
     float: left;
     height: 45px;
-    bottom: 0px;
     border: none;
-    margin-top: 20px;
+    position: relative;
+    bottom: 0px;
 }
 
+.grayArea>textarea, #tituloMarcador, select, .timeDivs{
+    border: 1px solid var(--lightGray) !important;
+    border-radius: 6px;
+    margin-bottom: 5px;
+    box-shadow: none;
+} 
+
 #tituloMarcador{
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
     font-weight: 300;
     margin-top: 5px;
+    float: left;
+    font-size: 18px;
 }
 
 .grayArea>textarea{
     resize: none;
-    border: none;
     height: 120px;
-    margin-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px;
     box-sizing: border-box;
     font-weight: 300;
-    margin-bottom: 10px;
     outline: none;
     font-size: 15px;
+    float: left;
 }
 
 .grayArea>select{
     width: calc(100% - 20px);
     margin-left: 10px;
     outline: none;
-    -webkit-appearance: menulist;
+    height: 30px;
+    -webkit-appearance:none;
+    background: url(down-arrow.png) no-repeat right white;
+    background-size: 20px;
+    font-size: 15px;
+    padding: 5px;
+    float: left;
+    font-weight: 300;
 }
 
 .grayArea>input[type="range"]{
@@ -363,38 +345,81 @@ button:active{
     background: none;
     height: 50px;
     outline: none;
-    width: 70%;
+    width: calc(100% - 100px);
+    position: relative;
+    float: left;
+    margin-left: 10px;
 }
 
 .grayArea>label{
+    font-weight: 600;
+    font-size: 18px;
+    width: 30px;
+    text-align: center;
     line-height: 50px;
+    float: left;
+    margin-left: 10px;
 }
 
 .grayArea>input[type="range"]::-webkit-slider-thumb{
     background: #FFFFFF;
     border: 0px solid rgba(0,0,0,0.15);
-    box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.30);
-    height: 25px;
-    width: 25px;
+    box-shadow: 0px 2px 2px 1px rgba(0,0,0,0.30);
+    height: 35px;
+    width: 35px;
     -webkit-appearance:none;
     border-radius: 50%;
-    margin-top: -10px;
+    margin-top: -15px;
 }
 
 .grayArea>input[type="range"]::-webkit-slider-runnable-track{
-    background: #909090;
-    border-radius: 2px;
+/*    background: #4C4C4C;*/
+    background: linear-gradient(to right, #4cd963 0%, #ffcc00 35%, #ff9500 70%, #ff3a30 100%);
+    border-radius: 3px;
     height: 4px;
 }
 
 .inTime{
-    width: 43% !important;
+/*    width: calc(100% - 70px);*/
+    width: 100px;
     float: left;
+    margin-top: 1px;
+    font-size: 15px;
+    font-weight: 200;
+    border: none;
+/*    -webkit-appearance: none;*/
+/*    background-color: white;*/
+/*
+    background-image: url(down-arrow.png);
+    background-size: 12px;
+    background-repeat: no-repeat;
+    background-position: right center;
+*/
+    
+}
+
+.timeDivs{
+    width: calc(50% - 15px);
+    height: 35px;
+    float: left;
+    margin-left: 10px;
+    background: white;
+    padding-top: 2px;
+    padding-left: 6px;
+    padding-right: 5px;
+    box-sizing: border-box;
 }
 
 
+.timeDivs>label>img{
+    height: 20px;
+    float: left;
+    margin-right: 3px;
+    margin-top: 5px;
+}
+
 .grayArea{
-    background: #D8D8D8;
+    background: var(--lightGray);
 }
 
 

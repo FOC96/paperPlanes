@@ -27,7 +27,7 @@
     </div>
     
             <div class="ficha" id="divMarcador">
-            <h1>Marcador</h1>
+            <h1>Nuevo Lugar</h1>
 
             <h3>Ubicación del marcador</h3>
             <div id="geoPinDiv"></div>
@@ -37,13 +37,14 @@
                 <input type="text" placeholder="Título" id="tituloMarcador">
                 <textarea placeholder="Descripción"></textarea>
                 <select>
+                    <option disabled selected>Tipo de Lugar</option>
                     <option>Comida</option>
                     <option>Entretenimiento</option>
                     <option>Ocio</option>
                 </select>
-                <input type="range" min="1" max="4">
-                <input type="time" class="inTime" placeholder="Abre">
-                <input type="time" class="inTime" placeholder="Cierra">
+                <div class="timeDivs"><label for="horaAbre"><img src="sun.svg"></label><input type="time" class="inTime" id="horaAbre"></div>
+                <div class="timeDivs"><label for="horaCierra"><img src="moon.svg"></label><input type="time" class="inTime"  id="horaCierra"></div>
+                <label for="rangoPrecio">-$</label><input type="range" min="1" max="4" id="rangoPrecio"><label for="rangoPrecio">+$</label>
             </div>
             <button class="btnVentana">Guardar</button>
             <button class="btnVentana" onclick="hidePopUp()">Cancelar</button>
